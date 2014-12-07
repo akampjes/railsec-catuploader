@@ -1,4 +1,4 @@
-Warmup
+Cat uploader
 ================
 
 * First upload some cat pictures
