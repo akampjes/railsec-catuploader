@@ -1,1 +1,12 @@
-<h3>Welcome</h3>
+<h3>Your collection of cats</h3>
+<ul>
+  <% @uploads.each do |name, path| %>
+      <li><%= link_to name, path %></li>
+  <% end %>
+</ul>
+
+<h3>Upload your lovely fluffy cat pictures</h3>
+<%= form_tag({action: :create}, multipart: true) do |f| %>
+    <%= file_field_tag :file %>
+    <%= submit_tag :upload %>
+<% end %>
